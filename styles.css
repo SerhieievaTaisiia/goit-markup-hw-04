@@ -115,8 +115,26 @@ a {
   display: flex;
   margin-left: auto;
 }
+.envelope-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.smartphone-icon {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.contacts-link:hover .envelope-icon {
+  fill: var(--accent-color);
+}
+.contacts-link:hover .smartphone-icon {
+  fill: var(--accent-color);
+}
 
-.envelope {
+/*.envelope {
   display: block;
   background-image: url(./img/envelope.svg);
   background-repeat: no-repeat;
@@ -126,18 +144,19 @@ a {
   background-image: url(./img/smartphone.svg);
   background-repeat: no-repeat;
   background-position: center left;
-}
+}*/
 .contacts .contacts-item:not(:last-child) {
   margin-right: 30px;
 }
-.contacts-link::before {
+
+/*.contacts-link::before {
   content: "";
   width: 16px;
   height: 12px;
   display: block;
   margin-right: 10px;
   background-size: contain;
-}
+}*/
 .site-nav a:hover,
 .site-nav a:focus {
   color: var(--accent-color);
@@ -235,6 +254,7 @@ a {
   content: "";
   display: block;
   height: 120px;
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -267,6 +287,7 @@ a {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
 }
 .team-list-items:not(:last-child) {
   margin-right: 30px;
@@ -292,6 +313,7 @@ a {
 .works-title {
   margin-top: 0;
   margin-bottom: 4px;
+  margin-left: 24px;
   padding-top: 20px;
   font-style: normal;
   font-weight: bold;
@@ -313,6 +335,7 @@ a {
   color: var(--title-text-color);
   margin-top: 0;
   margin-bottom: 20px;
+  margin-left: 24px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -324,6 +347,8 @@ a {
   /*width: calc((100%-60px)/3);*/
   margin-right: 30px;
   margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  background-color: #ffffff;
 }
 .works-list-item:nth-child(3n) {
   margin-right: 0;
@@ -382,24 +407,21 @@ a {
 .item-link:not(:last-child) {
   margin-right: 22px;
 }
-.item-link::after {
-  content: "";
+.instagram-icon {
   width: 20px;
   height: 20px;
-  display: block;
-  background-size: contain;
 }
-.instagram {
-  background-image: url(./img/instagram.svg);
+.twitter-icon {
+  width: 20px;
+  height: 20px;
 }
-.twitter {
-  background-image: url(./img/twitter.svg);
+.facebook-icon {
+  width: 20px;
+  height: 20px;
 }
-.facebook {
-  background-image: url(./img/facebook.svg);
-}
-.linkedin {
-  background-image: url(./img/linkedin.svg);
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
 }
 .button {
   color: var(--primary-text-color);
@@ -468,45 +490,36 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
 }
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
-.clients-list-item::after {
-  content: "";
-  display: block;
-  background-size: contain;
+.yaCo-icon {
+  width: 45px;
+  height: 50px;
 }
-.yaCo {
-  background-image: url(./img/yaCo.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.company-icon {
+  width: 40px;
+  height: 52px;
 }
-.company {
-  background-image: url(./img/company.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.company2-icon {
+  width: 41px;
+  height: 43px;
 }
-.company-two {
-  background-image: url(./img/company2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.fosterPeters-icon {
+  width: 80px;
+  height: 43px;
 }
-.foster-peters {
-  background-image: url(./img/fosterPeters.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.brand-icon {
+  width: 59px;
+  height: 47px;
 }
-.brand {
-  background-image: url(./img/Brand.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.companyTagLine-icon {
+  width: 89px;
+  height: 46px;
 }
-.tag-line {
-  background-image: url(./img/comanyTagLine.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .team-list a,
 .clients-list a {
   color: var(--title-text-color);
@@ -524,7 +537,7 @@ a {
   background-color: #2f303a;
   padding-top: 60px;
   display: flex;
-  align-items: baseline;
+
   padding-bottom: 60px;
 }
 .link-list {
@@ -556,8 +569,11 @@ a {
   margin-bottom: 9px;
 }
 .address {
-  margin-left: 214px;
   margin-right: 69px;
+}
+.class {
+  display: flex;
+  justify-content: baseline;
 }
 .call {
   display: block;
