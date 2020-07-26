@@ -249,12 +249,26 @@ a {
 }
 /*.feature-list-item {
   width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.antenna-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+}*/
+
+/*.feature-list-item {
+  width: 270px;
 }*/
 .feature-list-item::before {
   content: "";
   display: block;
   height: 120px;
-
+  width: 270px;
+  margin-bottom: 30px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -407,21 +421,47 @@ a {
 .item-link:not(:last-child) {
   margin-right: 22px;
 }
+.item-link-icon:hover {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  justify-content: center;
+  align-items: center;
+}
 .instagram-icon {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
 }
 .twitter-icon {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
 }
 .facebook-icon {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
 }
 .linkedin-icon {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
+}
+
+.item-link-icon:hover .instagram-icon {
+  fill: #ffffff;
+}
+.item-link-icon:hover .twitter-icon {
+  fill: #ffffff;
+}
+.item-link-icon:hover .facebook-icon {
+  fill: #ffffff;
+}
+.item-link-icon:hover .linkedin-icon {
+  fill: #ffffff;
 }
 .button {
   color: var(--primary-text-color);
@@ -495,29 +535,56 @@ a {
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
+.clients-list-item:hover .yaCo-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item:hover .company-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item:hover .company2-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item:hover .fosterPeters-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item:hover .brand-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item:hover .companyTagLine-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item:hover {
+  border-color: var(--accent-color);
+}
 .yaCo-icon {
   width: 45px;
   height: 50px;
+  fill: #afb1b8;
 }
 .company-icon {
   width: 40px;
   height: 52px;
+  fill: #afb1b8;
 }
 .company2-icon {
   width: 41px;
   height: 43px;
+  fill: #afb1b8;
 }
 .fosterPeters-icon {
   width: 80px;
   height: 43px;
+  fill: #afb1b8;
 }
 .brand-icon {
   width: 59px;
   height: 47px;
+  fill: #afb1b8;
 }
 .companyTagLine-icon {
   width: 89px;
   height: 46px;
+  fill: #afb1b8;
 }
 
 .team-list a,
