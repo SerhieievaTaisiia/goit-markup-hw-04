@@ -134,29 +134,9 @@ a {
   fill: var(--accent-color);
 }
 
-/*.envelope {
-  display: block;
-  background-image: url(./img/envelope.svg);
-  background-repeat: no-repeat;
-  background-position: center left;
-}
-.smartphone {
-  background-image: url(./img/smartphone.svg);
-  background-repeat: no-repeat;
-  background-position: center left;
-}*/
 .contacts .contacts-item:not(:last-child) {
   margin-right: 30px;
 }
-
-/*.contacts-link::before {
-  content: "";
-  width: 16px;
-  height: 12px;
-  display: block;
-  margin-right: 10px;
-  background-size: contain;
-}*/
 .site-nav a:hover,
 .site-nav a:focus {
   color: var(--accent-color);
@@ -178,11 +158,9 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-/*.page-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  align-items: center;
-}*/
+.page-header {
+  border: 1px solid #ececec;
+}
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -247,7 +225,10 @@ a {
 .feature-list-item:not(:last-child) {
   margin-right: 30px;
 }
-/*.feature-list-item {
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
@@ -257,36 +238,8 @@ a {
 .antenna-icon {
   width: 70px;
   height: 70px;
-  display: flex;
-}*/
+}
 
-/*.feature-list-item {
-  width: 270px;
-}*/
-.feature-list-item::before {
-  content: "";
-  display: block;
-  height: 120px;
-  width: 270px;
-  margin-bottom: 30px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-}
-.antenna-icon::before {
-  background-image: url(./img/antenna1.svg);
-}
-.clock-icon::before {
-  background-image: url(./img/clock1.svg);
-}
-.diagram-icon::before {
-  background-image: url(./img/diagram1.svg);
-}
-.astronaut-icon::before {
-  background-image: url(./img/astronaut1.svg);
-}
 /*работы*/
 .works-list {
   display: flex;
@@ -315,7 +268,7 @@ a {
 }
 
 .title {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   margin-bottom: 10px;
   font-style: normal;
   font-weight: 700;
@@ -363,6 +316,10 @@ a {
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   background-color: #ffffff;
+}
+.works-list-item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .works-list-item:nth-child(3n) {
   margin-right: 0;
@@ -419,14 +376,13 @@ a {
 }
 
 .item-link:not(:last-child) {
-  margin-right: 22px;
+  margin-right: 10px;
 }
-.item-link-icon:hover {
+.item-link-icon {
   display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--accent-color);
   justify-content: center;
   align-items: center;
 }
@@ -453,6 +409,9 @@ a {
 
 .item-link-icon:hover .instagram-icon {
   fill: #ffffff;
+}
+.item-link-icon:hover {
+  background-color: var(--accent-color);
 }
 .item-link-icon:hover .twitter-icon {
   fill: #ffffff;
@@ -523,7 +482,8 @@ a {
 .clients-list {
   justify-content: center;
 }
-.clients-list-item {
+
+.clients-list-item-link {
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
@@ -535,27 +495,28 @@ a {
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
-.clients-list-item:hover .yaCo-icon {
+.clients-list-item-link:hover .yaCo-icon {
   fill: var(--accent-color);
 }
-.clients-list-item:hover .company-icon {
-  fill: var(--accent-color);
-}
-.clients-list-item:hover .company2-icon {
-  fill: var(--accent-color);
-}
-.clients-list-item:hover .fosterPeters-icon {
-  fill: var(--accent-color);
-}
-.clients-list-item:hover .brand-icon {
-  fill: var(--accent-color);
-}
-.clients-list-item:hover .companyTagLine-icon {
-  fill: var(--accent-color);
-}
-.clients-list-item:hover {
+.clients-list-item-link:hover {
   border-color: var(--accent-color);
 }
+.clients-list-item-link:hover .company-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item-link:hover .company2-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item-link:hover .fosterPeters-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item-link:hover .brand-icon {
+  fill: var(--accent-color);
+}
+.clients-list-item-link:hover .companyTagLine-icon {
+  fill: var(--accent-color);
+}
+
 .yaCo-icon {
   width: 45px;
   height: 50px;
@@ -654,40 +615,22 @@ a {
 .link-list-item:not(:last-child) {
   margin-right: 10px;
 }
-.link-list-item::after {
-  content: "";
-  display: block;
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 75%;
   background-size: 20px;
 }
-.link-list-item:hover {
+.instagram-footer {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+.list-item:hover {
   background-color: var(--accent-color);
-}
-
-.footer-instagram {
-  background-image: url(./img/instagram-two.svg);
-  border-radius: 75%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.footer-twitter {
-  background-image: url(./img/twitter2.svg);
-  border-radius: 75%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.footer-facebook {
-  background-image: url(./img/facebook2.svg);
-  border-radius: 75%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.footer-linkedin {
-  background-image: url(./img/linkedin2.svg);
-  border-radius: 75%;
-  background-repeat: no-repeat;
-  background-position: center;
 }
